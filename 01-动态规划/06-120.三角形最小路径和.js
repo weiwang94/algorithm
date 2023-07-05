@@ -10,9 +10,9 @@
  * @return {number}
  */
 var minimumTotal = function(triangle) {
-  const dp = Array(triangle.length).fill(0)
+  const dp = new Array(triangle.length).fill(0)
   for (let i = 0; i < triangle.length; i++) {
-    dp[i] = Array(triangle[i].length).fill(0)
+    dp[i] = new Array(triangle[i].length).fill(0)
   }
   for (let i = triangle.length - 1; i >= 0; i--) {
     for (let j = 0; j < triangle[i].length; j++) {

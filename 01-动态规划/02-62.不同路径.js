@@ -11,6 +11,11 @@
  * @return {number}
  */
 var uniquePaths = function(m, n) {
+  /* 
+  ** 每一个路径都能是它**上边**和**左边**路径的和，因此求解路径数就是求解上面的路径和左边的路径，符合**问题能分解成重叠子问题的原则**
+  ** 状态转移方程： arr[i][j] = arr[i - 1][j] + arr[i][j - 1]
+  ** 确定初始状态，第一行或列只有一种路径，初始值是 1
+  */
   const arr = new Array(m).fill(0).map(() => new Array(n).fill(0))
   for(let i = 0; i < m; i++) {
     arr[i][0] = 1
