@@ -24,21 +24,6 @@ const tree = [
 
 const dfs = (arr) => {
   const res = [];
-  const stack = [arr]
-  let curr = null
-  while(stack.length) {
-    curr = stack.pop()
-    curr.forEach(node => {
-      res.push(node.v)
-    })
-    stack.push
-
-  }
-  return res;
-};
-
-const dfsRecursion = (arr) => {
-  const res = [];
   const recursion = (treeArr) => {
     treeArr.forEach((node) => {
       res.push(node.v);
@@ -51,5 +36,4 @@ const dfsRecursion = (arr) => {
   return res;
 };
 
-console.log("深度优先递归遍历：", dfsRecursion(tree));
-// console.log("深度优先循环遍历：", dfs(tree));
+console.log("深度优先递归遍历：", dfs(tree));
